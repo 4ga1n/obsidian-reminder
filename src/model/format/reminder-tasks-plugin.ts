@@ -300,16 +300,16 @@ export class TasksPluginFormat extends TodoBasedReminderFormat<TasksPluginRemind
       return undefined;
     }
 
-    const today = this.config
-      .getParameter(ReminderFormatParameterKey.now)
-      .moment();
-    today.set("hour", dtStart.get("hour"));
-    today.set("minute", dtStart.get("minute"));
-    today.set("second", dtStart.get("second"));
-    today.set("millisecond", dtStart.get("millisecond"));
-    if (today.isAfter(dtStart)) {
-      dtStart = today;
-    }
+    // const today = this.config
+    //   .getParameter(ReminderFormatParameterKey.now)
+    //   .moment();
+    // today.set("hour", dtStart.get("hour"));
+    // today.set("minute", dtStart.get("minute"));
+    // today.set("second", dtStart.get("second"));
+    // today.set("millisecond", dtStart.get("millisecond"));
+    // if (today.isAfter(dtStart)) {
+    //   dtStart = today;
+    // }
 
     // clone dtStart because dtStart will be modified by utc() call.
     const base = dtStart.clone();
